@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Buy</title>
+</head>
+<body>
+    <div>
+        <h3> Chackuot</h3>
+        <br />
+
+        <form method="post" action="">
+            <input type="hidden" name="TicketId" value="@ViewBag.Id">
+        </form>
+        <table>
+            <tbody>
+                <tr>
+                    <td>ФИО</td>
+                    <td><input type="text" name="FL"> </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" name="Email"> </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Order" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

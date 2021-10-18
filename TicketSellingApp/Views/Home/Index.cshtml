@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        Index
+    </title>
+</head>
+<body>
+    <h3>Airplane Tickets</h3>>
+    <br />
+    <table>
+        <thead>
+            <tr>
+                <td>Flight</td>
+                <td>Airline</td>
+                <td>Price (UAH)</td>
+                <td>&nbsp;</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var ticket in ViewBag.Tickets)
+                {
+                    <tr>
+                        <td>@ticket.Name</td>
+                        <td>@ticket.Producer</td>
+                        <td>@ticket.Price</td>
+                        <td><a href="/Home/Buy/@ticket.Id">Buy</a></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</body>
+</html>
